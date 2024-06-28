@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    margin-bottom: 20px; /* 헤더와 콘텐츠 사이의 간격 추가 */
+}
+
+.product-detail-page {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 40px; /* 추가: 헤더와 상품 상세 페이지 사이에 간격을 만듭니다 */
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-image {
+    background-color: #e0e0e0;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.product-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.size-selector {
+    margin-bottom: 20px;
+}
+
+.sizes {
+    display: flex;
+    gap: 10px;
+}
+
+.size-btn {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.size-btn.selected {
+    background-color: yellow;
+}
+
+.selected-size-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.selected-size-btn {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    background-color: orange;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#decrease-quantity, #increase-quantity {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+#quantity {
+    margin: 0 10px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#buy-now {
+    background-color: #ff9800;
+    color: white;
+}
+
+#add-to-cart {
+    background-color: #4caf50;
+    color: white;
+}
+
+.product-details {
+    margin-top: 20px;
+    white-space: pre-line; /* 이 속성을 추가합니다 */
+}

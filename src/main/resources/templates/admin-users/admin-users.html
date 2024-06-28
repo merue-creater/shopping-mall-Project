@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원관리</title>
+    <link rel="stylesheet" href="/css/admin-users.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <script type="module" src="/js/header.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="/js/admin-user.js" defer></script>
+</head>
+<body>
+<div class="header">
+    <div class="header">
+        <ul class="nav">
+            <li id="home-link"><a href="/">HOME</a></li>
+            <li id="shop-link"><a href="#">SHOP</a>
+                <ul class="dropdown" id="shop-dropdown"></ul>
+            </li>
+            <li><a href="#" id="search-link">SEARCH</a></li>
+        </ul>
+
+        <ul class="Lognav">
+            <li><a href="/loginForm" id="loginLink">LOGIN</a></li>
+            <li><a href="/account" id="accountLink">ACCOUNT</a></li>
+            <li><a href="/cart/view">BAG</a></li>
+        </ul>
+    </div>
+
+    <!-- 검색 모달 -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="search-input" class="underline-input" placeholder="검색어를 입력하세요">
+            <p id="search-description">엔터를 누르면 검색이 됩니다.</p>
+            <div id="search-results"></div> <!-- 검색 결과를 표시할 영역 -->
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>회원관리</h1>
+    <div class="stats">
+        <span>총 회원 수: <span id="total-members">0</span></span>
+        <span>관리자 수: <span id="admin-count">0</span></span>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>가입날짜</th>
+            <th>이메일</th>
+            <th>이름</th>
+            <th>권한</th>
+        </tr>
+        </thead>
+        <tbody id="user-table-body">
+        <!-- 회원 목록이 여기에 추가됩니다. -->
+        </tbody>
+    </table>
+    <p id="noUsersMessage" style="display: none; text-align: center; margin-top: 20px;">회원 내역이 없습니다</p>
+</div>
+<button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+</body>
+</html>

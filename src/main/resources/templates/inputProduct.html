@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 등록</title>
+    <link rel="stylesheet" href="/css/inputProduct.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <script src="/js/inputProduct.js" defer></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="header">
+        <ul class="nav">
+            <li id="home-link"><a href="/">HOME</a></li>
+            <li id="shop-link"><a href="#">SHOP</a>
+                <ul class="dropdown" id="shop-dropdown"></ul>
+            </li>
+            <li><a href="#" id="search-link">SEARCH</a></li>
+        </ul>
+
+        <ul class="Lognav">
+            <li><a href="/loginForm" id="loginLink">LOGIN</a></li>
+            <li><a href="/account" id="accountLink">ACCOUNT</a></li>
+            <li><a href="/cart/view">BAG</a></li>
+        </ul>
+    </div>
+
+    <!-- 검색 모달 -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="search-input" class="underline-input" placeholder="검색어를 입력하세요">
+            <p id="search-description">엔터를 누르면 검색이 됩니다.</p>
+            <div id="search-results"></div> <!-- 검색 결과를 표시할 영역 -->
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>상품등록</h2>
+
+    <form id="productForm" enctype="multipart/form-data" method="post">
+        <!-- 카테고리를 받아서 js에서 fetch로 보여주게 하는 설정 추가하기 -->
+        <label for="productName">상품 이름</label>
+        <input type="text" id="productName" name="productName">
+
+        <label for="categoryId">카테고리 ID</label>
+        <input type="text" id="categoryId" name="categoryId">
+
+        <label for="description">상품 설명</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <label for="price">가격</label>
+        <input type="number" id="price" name="price">
+
+        <div class="sizes">
+            <div>
+                <label>사이즈 S</label>
+                <input type="number" id="stockS" name="stockS">
+            </div>
+            <div>
+                <label>사이즈 M</label>
+                <input type="number" id="stockM" name="stockM">
+            </div>
+        </div>
+
+        <div class="sizes">
+            <div>
+                <label>사이즈 L</label>
+                <input type="number" id="stockL" name="stockL">
+            </div>
+            <div>
+                <label>사이즈 XL</label>
+                <input type="number" id="stockXL" name="stockXL">
+            </div>
+        </div>
+
+        <label for="details">세부정보</label>
+        <textarea id="details" name="details" rows="4"></textarea>
+
+        <label for="productImage">제품 사진</label>
+        <input type="file" id="productImage" name="productImage" accept="image/*" multiple>
+
+        <button type="submit">등록완료</button>
+    </form>
+</div>
+<script type="module" src="/js/header.js"></script>
+</body>
+</html>
